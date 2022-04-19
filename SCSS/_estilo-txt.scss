@@ -1,0 +1,28 @@
+/* Estilo de texto general */
+
+$font-general: 'poppins',
+sans-serif;
+$font-size-all: 14px;
+
+/* Estilo texto logo */
+
+$txt-transform: uppercase;
+$logo-f-style:normal;
+$logo-f-weight:bolder;
+$logo-f-size: 2rem;
+$logo-txt-deco: none;
+$logo-color: #ffffff;
+
+/* Estilo texto Carouseles */
+
+$body-f-color:#ededed;
+$font-italic: italic;
+$font-size-carousel: 1.125rem;
+
+/* Estilo texto promociones y combos */
+
+$promo-f-style: oblique;
+$promo-f-size: medium;
+$promo-txt-aligne:center;
+$promo-border-style:groove;
+$promo-border-color:#1d1c1c;

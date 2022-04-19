@@ -1,0 +1,247 @@
+@import url(../SCSS/_grids.scss);
+@import url(../SCSS/_general.scss);
+@import url(../SCSS/_estilo-txt.scss);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+.containerGrid {
+    display: grid;
+    grid-template-columns: $columnas-grid;
+    grid-template-rows: $filas-grid;
+    max-height: $alt-max-grid;
+    max-width: $ancho-max-grid;
+    grid-column-gap: $gap-columna-grid;
+    grid-row-gap: $gap-fila-grid;
+    background-color: $color-background-all;
+}
+
+.logoStyle {
+    height: $altura-logoStyle;
+}
+
+.logo1 {
+    grid-area: $area-grid-logo;
+    height: $alto-logo-nav;
+    text-transform: $txt-transform;
+    text-decoration: $logo-txt-deco;
+    font-family: $font-general;
+    font-weight: $logo-f-weight;
+    font-style: $logo-f-style;
+    font-size: $logo-f-size;
+    color: $logo-color;
+    background-color: $color-background-all;
+    justify-items: $justify-logo;
+    margin-left: $margen-izq-der-nav;
+}
+
+#navBar2 {
+    grid-area: $area-grid-nav;
+    height: $alto-logo-nav;
+    background-color: $color-background-all;
+    align-self: $justify-logo;
+    margin-left: $margen-izq-der-nav;
+    margin-right: $margen-izq-der-nav;
+    margin-top: $margen-top-nav;
+    border: $borde-nav;
+}
+
+.CarouselPromo3 {
+    grid-area: $area-grid-carousel;
+    width: $ancho-cien;
+    background-color: $promo-border-color;
+    font-style: $font-italic;
+    font-family: $font-general;
+    font-size: $font-size-carousel;
+}
+
+.cardImgApp4 {
+    grid-area: $area-grid-cardApp;
+    font-family: $font-general;
+    color: $body-f-color;
+    background-color: $color-background-all;
+    border-color: $logo-color;
+}
+
+.cardImgIoT5 {
+    grid-area: $area-grid-cardIoT;
+    background-color: $color-background-all;
+    font-family: $font-general;
+    color: $body-f-color;
+    border-color: $logo-color;
+}
+
+.promotions6 {
+    grid-area: $area-grid-Promo;
+    border-style: $promo-border-style;
+    border-color: $promo-border-color;
+    font-size: $promo-f-size;
+    font-style: $promo-f-style;
+    font-family: $font-general;
+    color: $logo-color;
+    text-align: $promo-txt-aligne;
+}
+
+.comboUser7 {
+    grid-area: $area-grid-combo;
+    border-style: $promo-border-style;
+    border-color: $promo-border-color;
+    color: $logo-color;
+    font-family: $font-general;
+    font-size: $promo-f-size;
+    font-style: $promo-f-style;
+    text-align: $promo-txt-aligne;
+}
+
+.carouselProd-App8 {
+    grid-area: $area-grid-app8;
+    max-width: $ancho-cien;
+    max-height: $alt-max-grid;
+}
+
+.footer9 {
+    grid-area: $area-grid-footer;
+    background-color: $promo-border-color;
+    text-decoration: $logo-txt-deco;
+    box-sizing: content-box;
+    margin-top: $margen-top-nav;
+}
+
+
+/* sin SASS*/
+
+#menu {
+    list-style: none;
+    font-size: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+#menuItem {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    background-color: #000000;
+}
+
+#menutxt {
+    font-size: 0.75rem;
+    text-align: center;
+    display: block;
+    color: #ededed;
+    background-color: #000000;
+    padding: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    flex-wrap: wrap;
+}
+
+#sub__menu {
+    padding-left: 0;
+}
+
+#menutxt:hover {
+    background-color: rgba(43, 43, 44, 99);
+}
+
+#menu #sub__menu {
+    width: 100%;
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+#menu #sub__menu #menuItem {
+    width: 100%;
+}
+
+#menu #menuItem:hover #sub__menu {
+    display: block;
+}
+
+#menu #menuItem:hover #sub__menu #menutxt:hover {
+    background-color: rgba(43, 43, 44, 99)
+}
+
+.linkPromos {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    color: #ededed;
+}
+
+.linkProd {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    color: #ededed;
+}
+
+a:link,
+a:visited,
+a:focus {
+    background: #1d1c1c;
+}
+
+a:hover {
+    background: #000000;
+    color: #ededed
+}
+
+footer {
+    display: flex;
+    background-color: #1d1c1c;
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    box-orient: vertical;
+    box-direction: normal;
+    flex-direction: column;
+    justify-content: space-between;
+    top: -1px;
+}
+
+.redesFooter {
+    background-color: #1d1c1c;
+}
+
+footer .footer__flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #1d1c1c;
+}
+
+footer .footer__menu {
+    list-style-type: none;
+    text-align: center;
+    background-color: #1d1c1c;
+}
+
+footer .footer__menu a {
+    max-block-size: 10px;
+    background-color: #1d1c1c;
+}
+
+footer .footer__menu img {
+    width: 15%;
+    height: auto;
+    background-color: #1d1c1c;
+}
+
+.footer__credito {
+    text-align: center;
+    font-size: 1 rem/1.43;
+    margin-bottom: 5px;
+    background-color: #1d1c1c;
+}
+
+.direccion {
+    text-align: center;
+    font-size: 1 rem/1.43;
+    background-color: #1d1c1c;
+}

@@ -1,0 +1,41 @@
+/*general*/
+
+$grid-display: grid;
+$columnas-grid: repeat(12, 1fr);
+$filas-grid: repeat(7, 1fr);
+
+/*logo*/
+
+$area-grid-logo: 1 / 1 / 2 / 4;
+
+/*nav*/
+
+$area-grid-nav:1 / 2 / 2 / 13;
+
+/*carousel promociones*/
+
+$area-grid-carousel: 2 / 1 / 3 / 13;
+
+/*card app*/
+
+$area-grid-cardApp: 3 / 1 / 4 / 10;
+
+/*Card IoT*/
+
+$area-grid-cardIoT: 4 / 4 / 5 / 13;
+
+/*Promociones*/
+
+$area-grid-Promo:5 / 1 / 6 / 7;
+
+/*Combos*/
+
+$area-grid-combo: 5 / 7 / 6 / 13;
+
+/*Carousel Promo*/
+
+$area-grid-app8:6 / 1 / 7 / 13;
+
+/*Footer*/
+
+$area-grid-footer:7 / 1 / 8 / 13;
