@@ -387,7 +387,7 @@ footer .footer__menu img {
 }
 
 .logo1-contact {
-    grid-area: 1/1/2/5;
+    grid-area: 1 / 1 / 2 / 4;
     height: 3.125rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -402,7 +402,7 @@ footer .footer__menu img {
 }
 
 #navBar2-contact {
-    grid-area: 1 / 5 / 2 / 13;
+    grid-area: 1 / 2 / 2 / 13;
     height: 3.125rem;
     background-color: #000000;
     color: #ededed;
