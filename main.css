@@ -1,11 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #000000;
 }
 
 body {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -14,34 +13,35 @@ body {
 .containerGrid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    max-height: 75rem;
+    grid-template-rows: repeat(2, 4rem) repeat(4, rem)/*aca me pasa esto, y no se por qué funciona así */
+    repeat(1, 20rem);
     max-width: 100%;
     grid-column-gap: 0;
     grid-row-gap: 0.3125rem;
     background-color: #000000;
+    margin: 0.3125rem;
 }
 
 
 /*header */
 
 .logoStyle {
-    height: fit-content;
+    margin: 0.90rem;
 }
 
 .logo1 {
     grid-area: 1 / 1 / 2 / 4;
-    height: 3.125rem;
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'poppins', sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 32px;
     color: #ffffff;
     background-color: #000000;
     justify-items: stretch;
     margin-left: 0.125rem;
+    margin-right: 0.125rem;
 }
 
 
@@ -49,13 +49,14 @@ body {
 
 #navBar2 {
     grid-area: 1 / 2 / 2 / 13;
-    height: 3.125rem;
+    width: calc(100% - 2.5rem);
     background-color: #000000;
     align-self: stretch;
     margin-left: 0.125rem;
-    margin-top: 0.9375rem;
+    margin-top: 0.95rem;
     margin-right: 0.125rem;
     border: 0;
+    padding-top: 0.625rem;
 }
 
 #menu {
@@ -117,21 +118,35 @@ body {
 
 .carouselPromo3 {
     grid-area: 2 / 1 / 3 / 13;
-    width: 100%;
-    background-color: #1d1c1c;
+    width: 98%;
+    background-color: transparent o !important;
     font-style: italic;
-    font-family: 'popins', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-size: 1.125rem;
+    margin: 00.94rem;
 }
 
 
 /*Card about app*/
 
 .cardImgApp4 {
-    grid-area: 3 / 1 / 4 / 10;
-    font-family: 'popins', sans-serif;
-    color: #ededed;
+    grid-area: 3 / 1 / 4 / 13;
+    border-color: #ffffff;
+    margin: 0.9rem;
+}
+
+.col-md-8 {
     background-color: #000000;
+    font-size: 14px;
+    font-family: 'poppins'sans-serif;
+    font-style: italic;
+}
+
+#cardIndexApp {
+    background-color: #000000;
+    color: #ededed;
+    font-family: 'popins', sans-serif;
+    font-size: 18px;
     border-color: #ffffff;
 }
 
@@ -139,10 +154,17 @@ body {
 /*Card about IoT*/
 
 .cardImgIoT5 {
-    grid-area: 4 / 4 / 5 / 13;
+    grid-area: 4 / 1 / 5 / 13;
+    margin: 0.9rem;
+    justify-self: flex-end;
+    justify-content: end;
+}
+
+#cardIndexIot {
     background-color: #000000;
-    font-family: 'popins', sans-serif;
     color: #ededed;
+    font-family: 'popins', sans-serif;
+    font-size: 18px;
     border-color: #ffffff;
 }
 
@@ -151,7 +173,6 @@ body {
 
 .promotions6 {
     grid-area: 5 / 1 / 6 / 7;
-    border-style: groove;
     border-color: #1d1c1c;
     color: #ffffff;
     font-family: 'popins', sans-serif;
@@ -183,6 +204,11 @@ body {
     color: #ededed;
 }
 
+.linkPromos:hover {
+    background: #000000;
+    color: rgb(11, 156, 132);
+}
+
 .linkProd {
     outline: none;
     text-decoration: none;
@@ -192,15 +218,9 @@ body {
     color: #ededed;
 }
 
-a:link,
-a:visited,
-a:focus {
-    background: #1d1c1c;
-}
-
-a:hover {
+.linkProd:hover {
     background: #000000;
-    color: #ededed
+    color: rgb(11, 156, 132);
 }
 
 
@@ -217,66 +237,139 @@ a:hover {
 
 .footer9 {
     grid-area: 7 / 1 / 8 / 13;
-    background-color: #1d1c1c;
-    text-decoration: none;
-    box-sizing: content-box;
-    margin-top: 15px;
+    width: 99%;
 }
 
-footer {
+.flex-containerFooter {
     display: flex;
-    background-color: #1d1c1c;
-    color: #ffffff;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;
-    box-orient: vertical;
-    box-direction: normal;
-    flex-direction: column;
-    justify-content: space-between;
-    top: -1px;
-}
-
-.redesFooter {
-    background-color: #1d1c1c;
-}
-
-footer .footer__flex {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #1d1c1c;
+    align-items: stretch;
+    align-content: stretch;
+    font-family: 'poppins'sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    background-image: linear-gradient(#000000, #e7dfdf);
 }
 
-footer .footer__menu {
+.flexItem-footer1:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
+    align-self: center;
+    order: 0;
+}
+
+u.footer-menu #liMenuFooter {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins'sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #c9c9c9;
+}
+
+#liMenuFooter #lifooter {
     list-style-type: none;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: start;
+    font-size: 14px;
+    font-family: 'poppins' sans-serif;
+}
+
+.flexItem-footer2:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
+    align-self: stretch;
     text-align: center;
-    background-color: #1d1c1c;
+    order: 0;
 }
 
-footer .footer__menu a {
-    max-block-size: 10px;
-    background-color: #1d1c1c;
-}
-
-footer .footer__menu img {
-    width: 15%;
-    height: auto;
-    background-color: #1d1c1c;
-}
-
-.footer__credito {
+.flexItem-footer3:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
+    align-self: stretch;
     text-align: center;
-    font-size: 1 rem/1.43;
-    margin-bottom: 5px;
-    background-color: #1d1c1c;
+    order: 0;
 }
 
-.direccion {
-    text-align: center;
-    font-size: 1 rem/1.43;
-    background-color: #1d1c1c;
+.icon-instagram {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: start;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-instagram:hover {
+    transition-duration: 0.2s;
+    font-size: 45px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-facebook {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: start;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-facebook:hover {
+    transition-duration: 0.2s;
+    font-size: 45px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-twitter {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: start;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-twitter:hover {
+    transition-duration: 0.2s;
+    font-size: 45px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 
@@ -384,7 +477,11 @@ footer .footer__menu img {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 100%;
+    background-color: #000000;
 }
+
+
+/*Logo contacto*/
 
 .logo1-contact {
     grid-area: 1 / 1 / 2 / 4;
@@ -401,6 +498,9 @@ footer .footer__menu img {
     margin-left: 0.125rem;
 }
 
+
+/*Barra navegacion contacto*/
+
 #navBar2-contact {
     grid-area: 1 / 2 / 2 / 13;
     height: 3.125rem;
@@ -413,78 +513,1057 @@ footer .footer__menu img {
     border: 0;
 }
 
+
+/*Formulario de contacto*/
+
 #Form1-contact {
     grid-area: 2 / 1 / 5 / 13;
     width: 90%;
     height: 20rem;
-    background-color: #ffffff;
+    background-color: #1d1c1c;
     color: #ededed;
     font-style: italic;
     font-family: 'poppins', sans-serif;
     font-size: 1.125rem;
-    margin: 10px;
+    margin: 2.5rem;
+    border-radius: 150rem;
+    -webkit-border-radius: 150rem;
+    -moz-border-radius: 150rem;
+    -ms-border-radius: 150rem;
+    -o-border-radius: 150rem;
+}
+
+
+/* Footer contacto */
+
+
+/* Footer */
+
+a:link a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .footer32-contact {
     grid-area: 5 / 1 / 6 / 13;
-    background-color: #1d1c1c;
-    text-decoration: none;
-    box-sizing: content-box;
-    margin-top: 15px;
 }
 
-footer {
-    display: flex;
-    background-color: #1d1c1c;
+
+/* Estilo de page Soporte */
+
+
+/*Grid soporte*/
+
+.containerGrid-soporte {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 3rem) repeat(6, 25rem) repeat(1, 20rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #000000;
+}
+
+
+/* Logo */
+
+.gridContainer-logo {
+    grid-area: 1 / 1 / 2 / 5;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 2rem;
     color: #ffffff;
+    background-color: #000000;
+    justify-items: stretch;
+    margin: 0.125rem;
+}
+
+
+/* Barra navegador Soporte */
+
+#gridContainer-navBar {
+    grid-area: 1 / 2 / 2 / 13;
+    width: calc(100% - 2.5rem);
+    background-color: #000000;
+    align-self: stretch;
+    margin-left: 0.125rem;
+    margin-top: 0.9375rem;
+    margin-right: 0.125rem;
+    border: 0;
+}
+
+
+/* Fila manual usuario, instalacion y "about FUTURE" */
+
+
+/*Botones fila 3 y 4*/
+
+.btnManuales {
+    background-color: #1d1c1c;
+    border: none;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-align: start;
+    margin: 0.25rem 0.125rem;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width: 22.5rem;
+    height: 17rem;
+    color: #ededed;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.stylebtn {
+    height: 15rem;
+    width: 20rem;
+}
+
+
+/*Fin botones*/
+
+.gridContainer-F3 {
+    grid-area: 2 / 1 / 4 / 13;
+}
+
+.flex-container-F3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 2rem;
+}
+
+.FI-manualUser:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22.5rem;
+    height: 17.1875rem;
+    align-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+    color: #ededed;
+}
+
+.FI-manualUser:hover {
+    background-color: #000000;
+}
+
+.btn-1:hover {
+    position: absolute;
+    background-color: #000000;
+    font-size: 25px;
+    opacity: 1;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: auto;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+.FI-manualInstall:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22.5rem;
+    height: 17.1875rem;
+    align-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+    color: #ededed;
+}
+
+.FI-manualInstall:hover {
+    background-color: #000000;
+}
+
+.btn-2:hover {
+    position: absolute;
+    background-color: #000000;
+    font-size: 25px;
+    opacity: 1;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: auto;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+.FI-aboutFuture:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22.5rem;
+    height: 17.1875rem;
+    align-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+    color: #ededed;
+}
+
+.FI-aboutFuture:hover {
+    background-color: #000000;
+}
+
+.btn-3:hover {
+    position: absolute;
+    background-color: #000000;
+    font-size: 25px;
+    opacity: 1;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: auto;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+
+/* Fila acerca IoT, consejos para Switches y consejos para Regador SOPORTE*/
+
+.gridContainer-F4 {
+    grid-area: 4 / 1 / 6 / 13;
+    max-height: 25rem;
+}
+
+.flex-container-F4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: normal;
+    align-content: stretch;
+    margin: 0.94rem;
+}
+
+.FI-acercaIoT:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22.5rem;
+    height: 17.1875rem;
+    align-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+    color: #ededed;
+}
+
+.FI-acercaIoT:hover {
+    background-color: #000000;
+}
+
+.btn-4:hover {
+    position: absolute;
+    background-color: #000000;
+    font-size: 25px;
+    opacity: 1;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: auto;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+.FI-consejosSwitches:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22.5rem;
+    height: 17.1875rem;
+    align-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+    color: #ededed;
+}
+
+.FI-consejosSwitches:hover {
+    background-color: #000000;
+}
+
+.btn-5:hover {
+    position: absolute;
+    background-color: #000000;
+    font-size: 25px;
+    opacity: 1;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: auto;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+.FI-ConsejosRegadores:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 22.5rem;
+    height: 17.1875rem;
+    align-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+    color: #ededed;
+}
+
+.FI-ConsejosRegadores:hover {
+    background-color: #000000;
+}
+
+.btn-6:hover {
+    position: absolute;
+    background-color: #000000;
+    font-size: 25px;
+    opacity: 1;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: auto;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+}
+
+
+/*Fila de registro de producto, Garantia y servicios de reparacion */
+
+.gridContainer-F5 {
+    grid-area: 6 / 1 / 7 / 13;
+}
+
+.flex-container-F5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: start;
+    justify-items: stretch;
+    align-content: stretch;
+    margin: 0.94rem;
+}
+
+.FI-RegistroProd:nth-child(1) {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: stretch;
+    justify-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+}
+
+.boton-soporte {
+    background-color: #1d1c1c;
+    border: none;
+    color: #ededed;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'poppins' sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0.05rem 0.05rem;
+    transition-duration: 0.8s;
+    transform-origin: bottom;
+    cursor: pointer;
+    border: 0.1875rem solid #494242;
+}
+
+.button1 {
+    background-color: #1d1c1c;
+    color: #ededed;
+    border: 0.1875rem solid #494242;
+}
+
+.button1:hover {
+    background-color: #ededed;
+    color: #000000;
+}
+
+.FI-InfoGarantia:nth-child(2) {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: stretch;
+    justify-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+}
+
+.button2 {
+    background-color: #1d1c1c;
+    color: #ededed;
+    border: 0.1875rem solid #494242;
+}
+
+.button2:hover {
+    background-color: #ededed;
+    color: #000000;
+}
+
+.FI-ServiciosReparacion:nth-child(3) {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: stretch;
+    justify-self: stretch;
+    order: 0;
+    background-color: #1d1c1c;
+}
+
+.button3 {
+    background-color: #1d1c1c;
+    color: #ededed;
+    border: 0.1875rem solid #494242;
+}
+
+.button3:hover {
+    background-color: #ededed;
+    color: #000000;
+}
+
+
+/* Fila de reclamos */
+
+.gridContainer-F6 {
+    grid-area: 7 / 1 / 9 / 13;
+}
+
+.flex-container-F6 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: center;
+    align-content: stretch;
+    text-align: center;
+    color: #ffffff;
+}
+
+.fi-txt-chat:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: stretch;
+    order: 0;
+}
+
+.fi-logo-whatsapp:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.btn-whatsapp {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    color: #00bb2d;
+    background-color: #000000;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 50px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.btn-whatsapp:hover {
+    text-decoration: none;
+    color: #00bb2d;
+    background-color: #ffffff;
+}
+
+.fi-logo-gmail:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+.btn-gmail {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    color: #c9c9c9;
+    background-color: #000000;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 50px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.btn-gmail:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+/* Footer */
+
+a:link a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.gridFooter-soporte {
+    grid-area: 9 / 1 / 10 / 13;
+}
+
+.flex-containerFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+    height: 15rem;
+    margin: 0.94rem;
+    font-family: 'poppins'sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    background-image: linear-gradient(#000000, #e7dfdf);
+}
+
+.flexItem-footer1:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
+    align-self: stretch;
+    order: 0;
+}
+
+ul.footer-menu #liMenuFooter {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins'sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#liMenuFooter #lifooter {
+    list-style-type: none;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: start;
+    font-size: 14px;
+    font-family: 'poppins' sans-serif;
+}
+
+.flexItem-footer2:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
+    align-self: stretch;
+    text-align: center;
+    order: 0;
+}
+
+.flexItem-footer3:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.33%;
+    align-self: stretch;
+    text-align: center;
+    order: 0;
+}
+
+.icon-instagram {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: start;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-instagram:hover {
+    transition-duration: 0.2s;
+    font-size: 45px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-facebook {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: start;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-facebook:hover {
+    transition-duration: 0.2s;
+    font-size: 45px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-twitter {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: start;
+    text-decoration: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.icon-twitter:hover {
+    transition-duration: 0.2s;
+    font-size: 45px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+
+/* Estilo de NOSOTROS */
+
+.gridContainer-Nos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 4rem) repeat(3, 45rem) repeat(1, 25rem);
+    grid-column-gap: 0;
+    grid-row-gap: 0px;
+    background-color: #000000;
+}
+
+
+/* Logo y nav NOS*/
+
+.LogoNos1-Grid {
+    grid-area: 1 / 1 / 2 / 4;
+    margin: 0.1rem;
+}
+
+.NavNos2-Grid {
+    grid-area: 1 / 3 / 2 / 13;
+    margin-top: 0.9rem;
+    padding: 0.75rem;
+}
+
+
+/* Fin Logo y Nav (NOS) */
+
+
+/* Quienes Somos (NOS) */
+
+.Grid3-QS {
+    grid-area: 2 / 1 / 3 / 13;
+}
+
+.flexConteinerQs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    width: 99%;
+}
+
+.flexItem-QS:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: 30rem;
+    align-self: stretch;
+    order: 0;
+    margin: 0.95rem;
+    background-image: url(./Imagenes/NosotrosFondo.jpg);
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.txtQS {
+    color: #e7dfdf;
+    background-image: url(./Imagenes/NosotrosFondo.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+
+/* Que Hacemos (NOS)*/
+
+.Grid4-QH {
+    grid-area: 3 / 1 / 4 / 13;
+}
+
+.flexContainerQh {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    width: 99%;
+}
+
+.flexItem-QH:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: 30rem;
+    align-self: stretch;
+    order: 0;
+    margin: 0.95rem;
+    background-image: url(./Imagenes/NosotrosFondo.jpg);
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+
+/*Botones Nos*/
+
+.Grid5-Btns {
+    grid-area: 4 / 1 / 5 / 13;
+}
+
+.flexContainerBTNS {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: normal;
+}
+
+.fi-btn-WWU:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+}
+
+.fi-btn-AMS:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+}
+
+#BTNNOS {
+    background-color: #494242;
+    color: #c9c9c9;
+    font-size: 14px;
+    font-family: 'poppins' sans-serif;
+    border-color: #c9c9c9;
+}
+
+#BTNNOS:hover {
+    background-color: #c9c9c9;
+    color: #000000;
+    font-size: 18px;
+    transition: 0.9seg;
+    -webkit-transition: 0.9seg;
+    -moz-transition: 0.9seg;
+    -ms-transition: 0.9seg;
+    -o-transition: 0.9seg;
+}
+
+.FooterGrid6 {
+    grid-area: 5 / 1 / 6 / 13;
+}
+
+.txtNOS {
+    color: #000000;
+    font-family: 'poppins'sans-serif;
+    font-size: 18px;
+}
+
+
+/* Productos Future */
+
+.GridContainerProd {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 5rem) repeat(4, 60rem)repeat(1, 25rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #000000;
+    color: #ededed;
+}
+
+.gridLogo-prod {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.gridNav-prod {
+    grid-area: 1 / 3 / 2 / 13;
+    margin: 1rem;
+}
+
+.gridLuminaria {
+    grid-area: 2 / 1 / 3 / 13;
+}
+
+.flexContainerPL {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 98%;
+    height: 55rem;
+    background-image: url(./Imagenes/houseligth.jpg);
+    background-repeat: no-repeat;
+    margin: 0.95rem;
+}
+
+.cardTitleSProd {
+    text-align: left;
+    font-size: 32px;
+    font-family: 'poppins'sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    text-transform: capitalize;
+    text-decoration: underline;
+    margin-left: 1.5rem;
+    width: 100%;
+}
+
+.cardTitleSProd:hover {
+    color: #ebdb4a;
+    transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.fiCard1Prod:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
+}
+
+.fiCard2Prod:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
+}
+
+.fiCard3Prod:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
+}
+
+.card-body {
+    color: #000000;
+    font-family: 'poppins' sans-serif;
+}
+
+.girdJardinprod {
+    grid-area: 3 / 1 / 4 / 13;
+}
+
+.flexContainerPJ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 98%;
+    height: 55rem;
+    background-color: #000000;
+    background-image: url(./Imagenes/fondoJardin.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0.5rem;
+}
+
+.fiCard1J:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
+}
+
+.fiCard2J:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
+}
+
+.fiCard3J:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
+}
+
+.gridSeguridad {
+    grid-area: 4 / 1 / 5 / 13;
+}
+
+.flexContainerSeg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 98%;
+    height: 55rem;
+    background-color: #000000;
+    background-image: url(./Imagenes/haouse.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: auto;
-    box-orient: vertical;
-    box-direction: normal;
-    flex-direction: column;
-    justify-content: space-between;
-    top: -1px;
+    margin: 0.5rem;
 }
 
-.redesFooter {
-    background-color: #1d1c1c;
+.fiCard1Seg:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
 }
 
-footer .footer__flex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #1d1c1c;
+.fiCard2Seg:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
 }
 
-footer .footer__menu {
-    list-style-type: none;
-    text-align: center;
-    background-color: #1d1c1c;
+.fiCard3Seg:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-self: stretch;
+    order: 0;
+    margin: 0.5rem;
+    align-self: center;
 }
 
-footer .footer__menu a {
-    max-block-size: 10px;
-    background-color: #1d1c1c;
+.gridFooter-prod {
+    grid-area: 6 / 1 / 7 / 13;
 }
 
-footer .footer__menu img {
-    width: 15%;
-    height: auto;
-    background-color: #1d1c1c;
-}
-
-.footer__credito {
-    text-align: center;
-    font-size: 1 rem/1.43;
-    margin-bottom: 5px;
-    background-color: #1d1c1c;
-}
-
-.direccion {
-    text-align: center;
-    font-size: 1 rem/1.43;
-    background-color: #1d1c1c;
+.card {
+    min-height: 28.75rem;
 }
