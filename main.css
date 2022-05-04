@@ -118,12 +118,13 @@ body {
 
 .carouselPromo3 {
     grid-area: 2 / 1 / 3 / 13;
-    width: 98%;
-    background-color: transparent o !important;
+    width: 80%;
     font-style: italic;
     font-family: 'poppins', sans-serif;
     font-size: 1.125rem;
-    margin: 00.94rem;
+    margin: 0.94rem;
+    justify-self: center;
+    align-self: center;
 }
 
 
@@ -132,21 +133,21 @@ body {
 .cardImgApp4 {
     grid-area: 3 / 1 / 4 / 13;
     border-color: #ffffff;
+    width: 90%;
     margin: 0.9rem;
+    align-self: center;
+    justify-self: flex-end;
 }
 
 .col-md-8 {
     background-color: #000000;
-    font-size: 14px;
     font-family: 'poppins'sans-serif;
     font-style: italic;
 }
 
 #cardIndexApp {
-    background-color: #000000;
     color: #ededed;
-    font-family: 'popins', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     border-color: #ffffff;
 }
 
@@ -156,8 +157,9 @@ body {
 .cardImgIoT5 {
     grid-area: 4 / 1 / 5 / 13;
     margin: 0.9rem;
+    width: 90%;
     justify-self: flex-end;
-    justify-content: end;
+    align-self: center;
 }
 
 #cardIndexIot {
@@ -173,7 +175,6 @@ body {
 
 .promotions6 {
     grid-area: 5 / 1 / 6 / 7;
-    border-color: #1d1c1c;
     color: #ffffff;
     font-family: 'popins', sans-serif;
     font-size: medium;
@@ -186,13 +187,13 @@ body {
 
 .comboUser7 {
     grid-area: 5 / 7 / 6 / 13;
-    border-style: groove;
-    border-color: #1d1c1c;
     color: #ffffff;
     font-family: 'popins', sans-serif;
     font-size: medium;
     font-style: oblique;
     text-align: center;
+    max-height: 1120px;
+    min-height: 40.1875rem;
 }
 
 .linkPromos {
@@ -228,8 +229,10 @@ body {
 
 .carouselProd-App8 {
     grid-area: 6 / 1 / 7 / 13;
-    max-width: 100%;
-    max-height: 75rem;
+    width: 80%;
+    height: 75rem;
+    align-self: center;
+    justify-self: center;
 }
 
 
